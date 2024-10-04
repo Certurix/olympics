@@ -31,6 +31,7 @@ def test_discipline_athletes():
 
 def test_top_countries():
     rows = db.get_top_countries()
+    # J'avais déjà modifié avant l'opérateur de la condition sans m'en rendre compte. Avant: ==, Après: >=
     assert len(rows) >= 10
 
 def test_collective_medals():
