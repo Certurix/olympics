@@ -11,3 +11,9 @@ dependencies = [
   'rich',
   'fastapi[standard]',
 ]
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests",
+  "olympics",
+]
