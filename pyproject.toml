@@ -13,6 +13,7 @@ dependencies = [
 ]
 
 [tool.pytest.ini_options]
+addopts = "--cov -v"
 testpaths = [
   "tests",
   "olympics",
