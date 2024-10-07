@@ -278,3 +278,6 @@ méthodes pour s’assurer que le code suit toujours ces bonnes pratiques.
 
 Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
+
+Question 7:
+Le paramètre file sert actuellement dans la librairie rich en utilisant l'objet Console à inclure le nom d'un fichier pour y rediriger son contenu. En l'occurrence, le contenu redirigé ici est le tableau affiché par chaque fonction (top_individual, top_collective, top_countries). De ce fait, ce paramètre inclut le paramètre file présent dans les 3 fonctions et sert donc à rediriger le contenu du tableau sous le nom inclus dans le paramètre file. Par exemple, si on exécute top_individual(10, "Top"), cela redirigera le contenu du tableau dans un fichier nommé Top. Le nom de cette technique s'appelle redirection de sortie.
