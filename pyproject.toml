@@ -14,7 +14,7 @@ dependencies = [
 
 [tool.pytest.ini_options]
 addopts = "--cov -v --cov-report term-missing"
-testpaths = [
-  "tests",
-  "olympics",
-]
+
+[tool.coverage.run]
+branch = true
+include = ["olympics/*", "tests/*"]
