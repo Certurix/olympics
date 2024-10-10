@@ -281,3 +281,6 @@ ajoutez-les à la fin de ce fichier.
 
 Question 7:
 Le paramètre file sert actuellement dans la librairie rich en utilisant l'objet Console à inclure le nom d'un fichier pour y rediriger son contenu. En l'occurrence, le contenu redirigé ici est le tableau affiché par chaque fonction (top_individual, top_collective, top_countries). De ce fait, ce paramètre inclut le paramètre file présent dans les 3 fonctions et sert donc à rediriger le contenu du tableau sous le nom inclus dans le paramètre file. Par exemple, si on exécute top_individual(10, "Top"), cela redirigera le contenu du tableau dans un fichier nommé Top. Le nom de cette technique s'appelle redirection de sortie.
+
+Question 8:
+Le commentaire « pragma: no cover » sert à indiquer à pytest de ne pas prendre en compte la ligne où se situe ce commentaire dans le test de couverture. De ce fait, pytest ne prendra pas en compte cette ligne (et le reste si c'est une condition, boucle...) en tant que déclaration ("statement) visible dans le graph généré à la fin d'un test.
