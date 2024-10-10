@@ -287,3 +287,8 @@ Le commentaire « pragma: no cover » sert à indiquer à pytest de ne pas p
 
 Question 9:
 Même si le taux de couverture est à 100%, cela n'est pas suffisant pour savoir si le projet est fiable ou fonctionnera comme voulu. D'autres tests sont aussi envisageable, comme un test d'intrusion ("pentest") notamment sur les requêtes SQL pour voir s'il y aurait des failles. Quoi qu'il en soit les tests unitaires actuels ne permettent pas d'attester que le code fonctionnera dans toutes les conditions.
+
+Question 10:
+Selon moi, le fait d'écrire les tests dans l'ordre indiqué permet de tester par priorité les fichiers et fonctions primaires du projet. En l'occurence on a commencé avec db, car la base de donnée est un élément important où les fonctions ne doivent contenir aucun bug, sinon il risque d'y avoir un effet en cascade. Si une fonction dans db.py ne fonctionne pas correctement, les autres fichiers appelant la fonction bugée ne fonctionneront pas correctement, pouvant renvoyer des erreurs ou faire crash le code.
+De cette manière, on s'assure que chaque éléments (db, api, cli et main) sont corrects et ne continennt pas de bug ou de problème majeur.
+Concernant le commit commun pour la correction de bug et le test de non-régression, je dirai qu'il s'agit d'une pratique courante qui permet de savoir s'il y a déjà eu un fixe pour un bug précédent et d'avoir la correction de bug et le test de non régression de ce bug dans le même commit, afin de les retrouver plus facilement. Cela permet d'avoir un historique clair et concis sans avoir besoin de chercher dans d'autres commits.
