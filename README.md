@@ -284,3 +284,6 @@ Le paramètre file sert actuellement dans la librairie rich en utilisant l'objet
 
 Question 8:
 Le commentaire « pragma: no cover » sert à indiquer à pytest de ne pas prendre en compte la ligne où se situe ce commentaire dans le test de couverture. De ce fait, pytest ne prendra pas en compte cette ligne (et le reste si c'est une condition, boucle...) en tant que déclaration ("statement) visible dans le graph généré à la fin d'un test.
+
+Question 9:
+Même si le taux de couverture est à 100%, cela n'est pas suffisant pour savoir si le projet est fiable ou fonctionnera comme voulu. D'autres tests sont aussi envisageable, comme un test d'intrusion ("pentest") notamment sur les requêtes SQL pour voir s'il y aurait des failles. Quoi qu'il en soit les tests unitaires actuels ne permettent pas d'attester que le code fonctionnera dans toutes les conditions.
